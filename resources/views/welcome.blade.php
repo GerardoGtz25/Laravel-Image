@@ -14,7 +14,7 @@
     <form action="/messages/create" method="post">
         <div class="form-group">
             {{ csrf_field() }}
-            <input type="text" name="message" class="form-control @if($errors->has('message')) is-invalid @endif" placeholder="Que estas pensando">
+            <input type="text" name="message" class="form-control @if($errors->has('message')) is-invalid @endif" placeholder="¿Qué estas pensando?">
             @if($errors->has('message'))
                 @foreach($errors->get('message') as $error)
                     <div class="invalid-feedback">{{ $error }}</div>   
