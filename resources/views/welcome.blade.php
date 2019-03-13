@@ -26,9 +26,7 @@
 <div class="row">
     @forelse($messages as $message)
         <div class="col-6">
-            <img class="img-thumbnail" src="{{ $message->image }}">
-            <p class="card-text">{{ $message->content }}</p>
-            <a href="/messages/{{ $message->id}}">Leer más</a>
+            @include('messages.message')
         </div>
     @empty
         <p>No hay mensajes destacados</p>
